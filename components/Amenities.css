@@ -1,0 +1,96 @@
+.wrapper {
+  background-image: url("/images/ami.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 550px;
+  position: relative;
+  
+}
+
+/* Text container */
+.wrapper .text {
+  background: rgba(63, 156, 193, 0.9); 
+  padding: 50px;
+  width: 40%;
+  min-height: 400px;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border-radius: 10px;
+}
+
+.wrapper h2 {
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.wrapper p {
+  margin: 20px 0 30px 0;
+  line-height: 1.6;
+}
+
+/* Content grid for amenities */
+.wrapper .content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-row-gap: 20px;
+  gap: 20px;
+}
+
+.wrapper .content .box {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper .content i {
+  margin-right: 15px;
+  font-size: 24px;
+}
+
+/* Responsive for tablets */
+@media (max-width: 768px) {
+  .wrapper {
+    height: auto;
+    padding: 40px 5%;
+  }
+
+  .wrapper .text {
+    position: relative;
+    width: 100%;
+    top: 0;
+    right: 0;
+    padding: 30px;
+  }
+
+  .wrapper .content {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+  }
+}
+
+/* Responsive for mobiles */
+@media (max-width: 480px) {
+  .wrapper .text {
+    padding: 20px;
+  }
+
+  .wrapper h2 {
+    font-size: 20px;
+  }
+
+  .wrapper p {
+    font-size: 14px;
+  }
+
+  .wrapper .content i {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+
+  .wrapper .content span {
+    font-size: 14px;
+  }
+}

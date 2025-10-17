@@ -1,0 +1,67 @@
+ .navbar {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  z-index: 1000;
+  padding: 15px 4%;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  gap: 50px;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: larger;
+}
+
+.nav-list li a:hover {
+  color: rgba(0, 0, 139, 0.933);
+}
+
+/* Hamburger icon hidden by default */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive: Mobile / Tablet */
+@media (max-width: 768px) {
+  .nav-list {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: #004aad;
+    display: none;
+    text-align: center;
+    padding: 20px 0;
+    gap: 20px;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
+}
